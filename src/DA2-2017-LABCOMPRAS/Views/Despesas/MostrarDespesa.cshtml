@@ -1,0 +1,16 @@
+﻿@model DA2_2017_LABCOMPRAS.Models.Despesa
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+
+<h1>Despesa</h1>
+<div class="well">
+
+    <strong>NomeDespesa:	</strong>@Model.NomeDespesa
+    <strong>Quantidade:	</strong>@Model.Quantidade
+    <strong>Valor:	</strong>@Model.Valor
+    <strong>Categoria:	</strong>@Model.Categoria
+    <strong>Pago:	</strong>@Model.Pago
+</div>
+
+<a asp-controller="Despesas" asp-action="Index" class="btn btn-primary">
+    <span class="glyphicon glyphicon-plus-sign"></span> Voltar às Despesas
+</a>

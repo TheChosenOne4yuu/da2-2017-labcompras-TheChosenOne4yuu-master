@@ -1,0 +1,49 @@
+﻿@model DA2_2017_LABCOMPRAS.Models.Despesa
+@* 
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Despesa</h1>
+<form asp-action="NovaDespesa" asp-controller="Despesas" method="post">
+    <div asp-validation-summary="All"></div>
+    
+    <p>
+        <label asp-for="NomeDespesa">Nome:</label>
+        <input asp-for="NomeDespesa" required/>
+    </p>
+
+    <p>
+        <label asp-for="Quantidade">Quantidade:</label>
+        <input asp-for="Quantidade" value ="1"/>
+    </p>
+
+
+    <p>
+        <label asp-for="Valor">Valor:</label>
+        <input asp-for="Valor" required />
+    </p>
+
+    <p>
+        <label asp-for="Categoria">Categoria:</label>
+        <select asp-for="Categoria" required>
+            <option value=""> --- Adicione a Categoria --- </option>
+            <option value="Alimentar">Alimentar</option>
+            <option value="Roupa">Roupa</option>
+            <option value="Transporte">Transporte</option>
+            <option value="Casa">Casa</option>
+            <option value="Pessoal">Pessoal</option>
+           
+        </select>
+    </p>
+    <p>
+        <label asp-for="Pago">Pago:</label>
+        <input type="checkbox" asp-for="Pago">
+            <option value="Sim">Sim</option>
+        <input type="checkbox" asp-for="Pago">
+            <option value="Não">Não</option>
+            
+        </input>
+    </p>
+    <button type="submit">Adicionar Despesa</button>
+</form>
